@@ -1,0 +1,222 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #4a148c;
+    color: white;
+    padding: 1.5em 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+header .contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+header .contact-info h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header .contact-info p {
+    margin: 0.5em 0 0 0;
+    display: flex;
+    align-items: center;
+}
+
+header .contact-info .icon {
+    margin-right: 0.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 1em;
+}
+main {
+    padding: 2em;
+}
+
+h2 {
+    color: #4a148c;
+}
+hr {
+    border: black;
+    height: 3px;
+    background-color: #ccc;
+    margin-left: 3cm;
+    margin-right: 10cm;
+}
+
+.wave {
+    display: inline-block;
+    animation: wave 1s infinite;
+}
+
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(20deg); }
+    40% { transform: rotate(-20deg); }
+    60% { transform: rotate(20deg); }
+    80% { transform: rotate(-20deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-content .text {
+    flex: 1;
+}
+
+.about-content .picture {
+    flex: 1;
+    text-align: left;
+}
+
+.about-content .picture img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-left:5cm ;
+}
+
+.skills-list, .recommendations-list {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 2em; 
+     margin-left: 3cm;
+     margin-right: 3cm;
+} 
+.skill, .recommendation {
+     background-color: #f3e5f5;
+     padding: 1em; border-radius: 8px;
+     text-align: center;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+} 
+.skill .icon {
+     font-size: 2em;
+}
+
+.project {
+    margin: 2em 0;
+}
+
+blockquote {
+    border-left: 5px solid #4a148c;
+    margin: 1em 0;
+    padding-left: 1em;
+    color: #555;
+}
+
+.leave-recommendation {
+    margin-top: 5em;
+}
+
+.leave-recommendation form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.leave-recommendation label {
+    margin-top: 1em;
+}
+
+.leave-recommendation input,
+.leave-recommendation textarea {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200%;
+    max-width: 400px;
+    margin-bottom: 1em;
+}
+
+.leave-recommendation button {
+    background-color: #4a148c;
+    color: white;
+    width: 10%;
+}
+#back-to-top {
+    position: bottom;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4a148c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 28cm;
+    margin-bottom: 2cm;
+}
+
+#back-to-top:hover {
+    background-color: #6a1b9a;
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4a148c;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+    font-size: 18px;
+}
+
+#popup.active {
+    display: block;
+}
+
+#popup button {
+    background-color: white;
+    color: #4a148c;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#popup button:hover {
+    background-color: #f3e5f5;
+}
+
